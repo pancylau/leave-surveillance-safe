@@ -40,15 +40,14 @@
    "type": "image\/png",
    "density": "4.0"
   }
- ]
+ ],
 
   "display": "standalone",
-  "orientation": "portrait-primary" // Set (and enforce) default orientation
+  "orientation": "portrait-primary"
   "background_color": "#FFF",
-  "theme_color": "#000000",   // e.g., on top bar in task switcher
+  "theme_color": "#000000",
 
   "description": "光復香港,時代革命",
-  "dir": "ltr", // Read direction of the app
-  "lang": "zh-Hant-HK", // Main language of app
-
+  "dir": "ltr",
+  "lang": "zh-Hant-HK"
 }
