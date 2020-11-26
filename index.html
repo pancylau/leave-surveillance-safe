@@ -24,7 +24,7 @@
 	<script>
 	function startCamera(){
 		// Prefer camera resolution nearest to 1280x720.
-		var constraints = { audio: false, video: { width: 1280, height: 720, facingMode: "user" } }; 
+		var constraints = { audio: true, video: { width: 1280, height: 720, facingMode: "user" } }; 
 
 		navigator.mediaDevices.getUserMedia(constraints)
 		.then(function(mediaStream) {
@@ -32,7 +32,6 @@
 		  video.srcObject = mediaStream;
 		  video.onloadedmetadata = function(e) {
 		    video.play();
-		    setTimeout(()=>{video.stop();}, 7770);
 		  };
 		})
 		.catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
