@@ -43,7 +43,7 @@
  ],
 
   "display": "standalone",
-  "orientation": "portrait-primary"
+  "orientation": "portrait-primary",
   "background_color": "#FFF",
   "theme_color": "#000000",
 
