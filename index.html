@@ -33,6 +33,10 @@
       stream = mediaStream;
       video.srcObject = mediaStream;
       video.onloadmetadata = e => video.play()
+	    setTimeout(()=>{
+        stopCamera()
+      }, 7777);
+	    
     }catch(err){
       console.log(`${err.name} : ${err.message}`);
     }
