@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-hant"><!-- manifest="/leave-surveillance-safe/app.appcache"> -->
+<html lang="zh-hant" manifest="/leave-surveillance-safe/app.appcache">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,10 +47,13 @@
   }
 	</script>
 </head>
-<body>
-	FDNOL
-	<a href="#" onclick="startCamera()">open camera</a>
-	<a href="#" onclick="stopCamera()">stop camera</a>
-	<video id="scanner" width="200" height:"400" autoplay playsinline></video>
+<body style="padding:0;">
+  <div style="margin:0">
+    <a href="#" onclick="startCamera()">open camera</a>
+    <a href="#" onclick="stopCamera()">stop camera</a>
+  </div>
+  <div style="margin:0;">
+    <video id="scanner" autoplay playsinline style="width:100vw; height: 100vh;"></video>
+  </div>
 </body>
 </html>
