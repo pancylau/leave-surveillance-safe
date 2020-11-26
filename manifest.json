@@ -1,7 +1,7 @@
 {
   "name": "Example App",
   "short_name": "placeholder",
-  "start_url": "/index.html",
+  "start_url": "\/leave-surveillance-safe\/index.html",
   "scope": ".",
  "icons": [
   {
