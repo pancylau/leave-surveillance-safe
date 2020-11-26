@@ -22,20 +22,25 @@
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 	<script>
-	function startCamera(){
-		// Prefer camera resolution nearest to 1280x720.
-		var constraints = { audio: false, video: { width: 1280, height: 720, facingMode: "user"} }; 
+  const video = document.querySelector('#scanner');
 
-		navigator.mediaDevices.getUserMedia(constraints)
-		.then(function(mediaStream) {
-		  var video = document.querySelector('#scanner');
-		  video.srcObject = mediaStream;
-		  video.onloadedmetadata = function(e) {
-		    video.play();
-		  };
-		})
-		.catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
-	}
+  function startCamera(){
+    // Prefer camera resolution nearest to 1280x720.
+    const constraints = { audio: false, video: { width: 1280, height: 720, facingMode: "user"} }; 
+
+    navigator.mediaDevices.getUserMedia(constraints)
+    .then(function(mediaStream) {
+      video.srcObject = mediaStream;
+      video.onloadedmetadata = function(e) {
+        video.play();
+        setTimeout(()=>stopCamera(mediaStream), 7777);
+      };
+    })
+    .catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
+    }
+    function stopCamera(stream){
+      stream.getTracks().forEach(track => track.stop());
+    }
 	</script>
 </head>
 <body>
