@@ -22,10 +22,10 @@
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 	<script>
-  const video = document.querySelector('#scanner');
   let stream;
 
   async function startCamera(){
+    const video = document.querySelector('#scanner');
     // Prefer camera resolution nearest to 1280x720.
     const constraints = { audio: false, video: { width: 1280, height: 720, facingMode: "user"} }; 
     try{
